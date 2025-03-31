@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Mar 30 23:56:09 2025
+# Process ID         : 19108
+# Current directory  : C:/Users/Abner Xot/OneDrive - Universidad Mariano Gálvez/Documentos/Data/mariano/11 Semestre/Innovacion/Serie III P1/project_5
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent6544 C:\Users\Abner Xot\OneDrive - Universidad Mariano Gálvez\Documentos\Data\mariano\11 Semestre\Innovacion\Serie III P1\project_5\project_5.xpr
+# Log file           : C:/Users/Abner Xot/OneDrive - Universidad Mariano Gálvez/Documentos/Data/mariano/11 Semestre/Innovacion/Serie III P1/project_5/vivado.log
+# Journal file       : C:/Users/Abner Xot/OneDrive - Universidad Mariano Gálvez/Documentos/Data/mariano/11 Semestre/Innovacion/Serie III P1/project_5\vivado.jou
+# Running On         : DESKTOP-IPUAJ7V
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz
+# CPU Frequency      : 1992 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 17045 MB
+# Swap memory        : 1073 MB
+# Total Virtual      : 18119 MB
+# Available Virtual  : 8403 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Abner Xot/OneDrive - Universidad Mariano Gálvez/Documentos/Data/mariano/11 Semestre/Innovacion/Serie III P1/project_5/project_5.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Abner Xot/OneDrive - Universidad Mariano Gálvez/Documentos/Data/mariano/11 Semestre/Innovacion/Serie III P1/project_5'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Abner Xot/project_5' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Abner Xot/OneDrive - Universidad Mariano Gálvez/Documentos/Data/mariano/11 Semestre/Innovacion/Serie III P1/project_5/project_5.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:07 . Memory (MB): peak = 1181.953 ; gain = 62.848
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 30 23:58:50 2025...
