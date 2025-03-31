@@ -1,0 +1,62 @@
+module main_module(
+    input logic clk,
+    input logic rst,
+    input logic S, L1, L2, L3, // Entradas para el next_state
+    output logic X1, X0,        // Salidas del flip-flop
+    output logic GROUND, L1_out, L2_out, L3_out, // Salidas del output_logic
+    output logic VERDE_GROUND, ROJO_GROUND, // Salidas del LED_indicador para GROUND
+    output logic VERDE_L1, ROJO_L1,         // Salidas del LED_indicador para L1_out
+    output logic VERDE_L2, ROJO_L2,         // Salidas del LED_indicador para L2_out
+    output logic VERDE_L3, ROJO_L3          // Salidas del LED_indicador para L3_out
+);
+
+    logic [1:0] next_state_out;
+
+    // Instancia del módulo next_state con retroalimentación desde el flip-flop
+    next_state ns_inst (
+        .S1(X0), .S0(X1), .S(S), .L1(L1), .L2(L2), .L3(L3),
+        .x(next_state_out)
+    );
+
+    // Instancia del módulo d_flipflop
+    d_flipflop dff_inst (
+        .clk(clk), .rst(rst),
+        .D1(next_state_out[1]), .D0(next_state_out[0]),
+        .X1(X1), .X0(X0)
+    );
+
+    // Instancia del módulo output_logic
+    output_logic out_logic_inst (
+        .S0({X1, X0}), // Conectamos X1 a S0[1] y X0 a S0[0]
+        .GROUND(GROUND), 
+        .L1(L1_out), 
+        .L2(L2_out), 
+        .L3(L3_out)
+    );
+
+    // Instancias del módulo LED_indicador para cada salida
+    LED_indicador led_indicador_inst_ground (
+        .S0(GROUND),    // Conectamos la salida GROUND de output_logic
+        .VERDE(VERDE_GROUND),   // Salida VERDE para GROUND
+        .ROJO(ROJO_GROUND)     // Salida ROJO para GROUND
+    );
+
+    LED_indicador led_indicador_inst_L1 (
+        .S0(L1_out),    // Conectamos L1_out de output_logic
+        .VERDE(VERDE_L1),   // Salida VERDE para L1_out
+        .ROJO(ROJO_L1)     // Salida ROJO para L1_out
+    );
+
+    LED_indicador led_indicador_inst_L2 (
+        .S0(L2_out),    // Conectamos L2_out de output_logic
+        .VERDE(VERDE_L2),   // Salida VERDE para L2_out
+        .ROJO(ROJO_L2)     // Salida ROJO para L2_out
+    );
+
+    LED_indicador led_indicador_inst_L3 (
+        .S0(L3_out),    // Conectamos L3_out de output_logic
+        .VERDE(VERDE_L3),   // Salida VERDE para L3_out
+        .ROJO(ROJO_L3)     // Salida ROJO para L3_out
+    );
+
+endmodule
