@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/Abner Xot/FSM_ELEVATOR/FSM_ELEVATOR.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/Abner Xot/FSM_ELEVATOR/FSM_ELEVATOR.srcs/sources_1/new/Main.sv,1743396312,systemVerilog,,C:/Users/Abner Xot/FSM_ELEVATOR/FSM_ELEVATOR.srcs/sources_1/new/testbench.sv,,LED_indicador;and2;and2_alt;and3;and4;and5;and6;d_flipflop;inv;inv_alt;main_module;next_state;or12;output_logic,,uvm,,,,,,
+C:/Users/Abner Xot/FSM_ELEVATOR/FSM_ELEVATOR.srcs/sources_1/new/testbench.sv,1743396412,systemVerilog,,,,main_module_tb,,uvm,,,,,,
